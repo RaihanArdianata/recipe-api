@@ -36,6 +36,12 @@ PASSWORD =
 SECRET = 
 ```
 
+## Seeder
+
+```bash
+$ npm run seed
+```
+
 
 ## Installation
 
