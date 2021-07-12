@@ -28,8 +28,8 @@
 
 ## Postman
 
-- Postman - [](https://www.getpostman.com/collections/8094d8cf6d72560383e0)
-- Postman Doc - [](https://documenter.getpostman.com/view/8372936/Tzm8EF19)
+- Postman - [nest_food](https://www.getpostman.com/collections/8094d8cf6d72560383e0)
+- Postman Doc - [nest_food](https://documenter.getpostman.com/view/8372936/Tzm8EF19)
 
 ## Configuration
 
