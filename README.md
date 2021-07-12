@@ -26,6 +26,11 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Postman
+
+- Postman - [](https://www.getpostman.com/collections/8094d8cf6d72560383e0)
+- Postman Doc - [](https://documenter.getpostman.com/view/8372936/Tzm8EF19)
+
 ## Configuration
 
 .env
