@@ -1,6 +1,6 @@
 import { Recipe } from './../recipe/recipe.entity';
-import { Column, Entity, JoinColumn, OneToMany, PrimaryGeneratedColumn } from "typeorm";
-import {Role} from "src/utils/role.enum";
+import { Column, Entity, JoinColumn, JoinTable, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import {Role} from "src/utils/enums/role.enum";
 
 @Entity('users')
 export class User{
@@ -17,12 +17,17 @@ export class User{
     password: string;
 
     @Column({default: Role.User})
-    role: string
+    role: number
 
     @Column({default: false})
     isValidate: boolean;
 
-    @OneToMany(type => Recipe, recipe => recipe.id)
-    @JoinColumn({name: "recipe_id"})
-    recipe: Recipe
+    // @Column({})
+    // createdAt: Date;
+
+    // @Column({})
+    // deletedAt: Date;
+
+    @OneToMany(type => Recipe, recipe => recipe.user)
+    recipe: Recipe[]
 }

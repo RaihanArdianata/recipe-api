@@ -17,7 +17,7 @@ export class UserService {
                 return [
                     {
                     path: 'email',
-                    message: 'invalid email or password',
+                    message: 'invalid email or emai already in use',
                     },
                 ];
             }
@@ -34,7 +34,15 @@ export class UserService {
         return this.userRepository.update(id, data)
     }
 
+    async delete(id: number): Promise<any>{
+        return this.userRepository.delete(id)
+    }
+
     async findOne(condition: any): Promise<User>{
         return this.userRepository.findOne(condition);
+    }
+
+    async findAll(): Promise<User[]>{
+        return this.userRepository.find({relations : ['recipe']})
     }
 }

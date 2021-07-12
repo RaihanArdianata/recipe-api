@@ -1,5 +1,5 @@
 import { User } from "src/user/user.entity";
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('recipe')
 export class Recipe{
@@ -12,6 +12,10 @@ export class Recipe{
     @Column()
     content: string;
 
-    @ManyToOne(type => User, user => user.id)
+    @Column()
+    image: string;
+
+    @ManyToOne(type => User, user => user.recipe, {onDelete: 'SET NULL'})
+    @JoinColumn()
     user: User
 }
