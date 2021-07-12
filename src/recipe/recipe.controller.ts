@@ -30,7 +30,11 @@ export class RecipeController {
         
         const myRecipe =  await this.recipeService.findMyRecipe(user)
 
-        return myRecipe
+        return {   
+            success : true,
+            message : "success",
+            data: myRecipe
+        }
     }
 
     @UseGuards(JwtAuthGuard, RolesGuard)
